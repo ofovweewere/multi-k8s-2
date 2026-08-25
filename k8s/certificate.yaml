@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+
+kind: Certificate
+metadata:
+  name: fibbycube-com-tls
+spec:
+  secretName: fibbycube-com
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: fibbycube.com
+  dnsNames:
+    - fibbycube.com
+    - www.fibbycube.com
